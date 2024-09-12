@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - DocLock</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="left-section">
+            <div class="illustration">
+                <img src="https://cdni.iconscout.com/illustration/premium/thumb/login-page-illustration-download-in-svg-png-gif-file-formats--app-developing-development-secure-mobile-webapp-and-pack-design-illustrations-3783954.png?f=webp"
+                    alt="Illustration">
+            </div>
+        </div>
+
+        <div class="right-section">
+
+            <div class="logo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLGpiQtOqITL_LH7Zismf-pIikKoGp41w4FrghiKTZTZNBQ6IUHEWB_RqXbVHe-d4cFvQ&usqp=CAU"
+                    alt="DigiLocker Logo">
+            </div>
+
+            <h1>Welcome!</h1>
+
+            <form id="login-form">
+
+                <div class="input-group">
+                    <label for="username">
+                        <i class="fas fa-user"></i>
+                    </label>
+                    <input type="text" id="username" placeholder="Username" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">
+                        <i class="fas fa-lock"></i>
+                    </label>
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+
+
+                <button type="submit">Login</button>
+
+                <p id="error-message"></p>
+            </form>
+
+
+            <p><a href="register.html">Register</a> | <a href="reset-password.html">Forgot Password?</a></p>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="login.js"></script>
+</body>
+
+</html>

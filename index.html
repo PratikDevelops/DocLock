@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocLock - Secure Your Documents</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1 class="logo">DocLock</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Securely Store Your Documents with DocLock</h2>
+                <p>Your one-stop solution for safe, secure, and easy document storage.</p>
+                <a href="register.html" class="btn">Get Started</a>
+            </div>
+            <div class="hero-image">
+                <img
+                    src="https://static.vecteezy.com/system/resources/previews/014/049/139/non_2x/flat-electronic-document-management-concept-outline-design-style-minimal-illustration-for-landing-page-web-banner-infographics-hero-images-vector.jpg">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About DocLock</h2>
+            <p>DocLock is your secure digital vault for all important documents. Protect your files with
+                state-of-the-art encryption and access them anytime, anywhere.</p>
+        </div>
+    </section>
+
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Features</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-user-shield"></i>
+                    <h3>User-Friendly Interface</h3>
+                    <p>Simple and intuitive design makes it easy for you to upload and manage your documents.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-file-upload"></i>
+                    <h3>Quick Upload</h3>
+                    <p>Upload your documents quickly and securely with our drag-and-drop feature.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-sync-alt"></i>
+                    <h3>Seamless Access</h3>
+                    <p>Access your documents from any device, at any time, with our cross-platform support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <i class="fas fa-user-plus"></i>
+                    <h3>Sign Up</h3>
+                    <p>Create your free account with DocLock and start securing your documents.</p>
+                </div>
+                <div class="step">
+                    <i class="fas fa-upload"></i>
+                    <h3>Upload Documents</h3>
+                    <p>Upload your important documents securely using our easy-to-use interface.</p>
+                </div>
+                <div class="step">
+                    <i class="fas fa-share-alt"></i>
+                    <h3>Share Securely</h3>
+                    <p>Share your documents with trusted contacts without worrying about security.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need support, feel free to reach out to us.</p>
+            <form name="submit-to-google-sheet">
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="Email" placeholder="Your Email" required>
+                <textarea name="Message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <span id="msg"></span>
+    </section>
+
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 DocLock. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+    <script>
+        const scriptURL = ' https://script.google.com/macros/s/AKfycbxZKMCZdfAzIIGy6jfxDQ2n0NyAQHipEUXo0ahptR-JgyVOjyeKiFYMn0vTVlCWaaLG/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById('msg')
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Thank you for contacting us!"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+</body>
+
+</html>
