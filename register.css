@@ -9,34 +9,35 @@ body {
 }
 
 .container {
-    width: 70%;
-    max-width: 1200px;
+    width: 80%;
+    max-width: 1000px;
     display: flex;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     overflow: hidden;
+    margin: 20px;
 }
 
 .left-section {
-    width: 50%;
+    width: 45%;
     background-color: #7366ff;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px;
+    padding: 30px;
 }
 
 .left-section img {
-    width:500px;
-    height: 500px;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
     object-fit: contain;
-    
 }
 
 .right-section {
-    width: 50%;
+    width: 55%;
     background-color: #ffffff;
-    padding: 60px;
+    padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,20 +45,20 @@ body {
 }
 
 .logo img {
-    max-width: 120px;
-    margin-bottom: 40px;
-
+    max-width: 100px;
+    margin-bottom: 30px;
 }
 
 h1 {
-    font-size: 28px;
+    font-size: 24px;
     color: #333;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .input-group {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     position: relative;
 }
 
@@ -67,14 +68,15 @@ h1 {
     top: 50%;
     transform: translateY(-50%);
     color: #333;
+    font-size: 14px;
 }
 
 .input-group input {
     width: 100%;
-    padding: 15px 20px 15px 40px;
-    font-size: 16px;
+    padding: 12px 15px 12px 35px;
+    font-size: 14px;
     border: 1px solid #ddd;
-    border-radius: 30px;
+    border-radius: 20px;
     outline: none;
     transition: all 0.3s ease;
 }
@@ -85,12 +87,12 @@ h1 {
 
 button[type="submit"] {
     width: 100%;
-    padding: 15px;
+    padding: 12px;
     background-color: #7366ff;
     border: none;
-    border-radius: 30px;
+    border-radius: 25px;
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -100,9 +102,10 @@ button[type="submit"]:hover {
 }
 
 p {
-    margin-top: 20px;
+    margin-top: 15px;
     color: #7366ff;
     font-size: 14px;
+    text-align: center;
 }
 
 p a {
@@ -117,7 +120,7 @@ p a:hover {
 
 .success-message {
     color: #28a745; 
-    font-size: 16px;
-    margin-top: 20px;
+    font-size: 14px;
+    margin-top: 15px;
     text-align: center;
 }
