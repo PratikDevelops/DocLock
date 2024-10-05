@@ -53,7 +53,6 @@ nav ul li a:hover {
     color: #7366ff;
 }
 
-
 .hero {
     background: linear-gradient(135deg, #7366ff 0%, #4f3cc9 100%);
     color: #fff;
@@ -63,22 +62,22 @@ nav ul li a:hover {
     justify-content: center;
     text-align: center;
     position: relative;
+    overflow: hidden;
 }
 
 .hero .hero-content {
     margin-bottom: 20px;
+    animation: slideIn 1s ease-out;
 }
 
 .hero h2 {
     font-size: 2.5rem;
-    color: #fff;
     margin-bottom: 10px;
     animation: fadeIn 1s ease-out;
 }
 
 .hero p {
     font-size: 1.2rem;
-    color: #e1e1e1;
     margin-bottom: 20px;
     animation: fadeIn 1.5s ease-out;
 }
@@ -100,10 +99,8 @@ nav ul li a:hover {
 
 .hero-image img {
     max-width: 100%;
-    height: 350px;
-    width: 950px;
-    object-fit: fill;
-    object-position: inherit;
+    height: auto;
+    object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
@@ -111,48 +108,54 @@ nav ul li a:hover {
 .about {
     padding: 60px 20px;
     background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .about h2 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #7366ff;
     margin-bottom: 20px;
 }
 
 .about p {
     text-align: center;
-    font-size: 1.1rem;
-    color: #555;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #666;
+    animation: fadeIn 1s ease-out;
 }
 
 .features {
     padding: 60px 20px;
     background: #f4f7f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .features h2 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #7366ff;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .features-grid {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .feature-item {
     background: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
     flex: 1 1 calc(33.333% - 40px);
     margin: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.5s ease-in-out;
 }
 
 .feature-item:hover {
@@ -160,50 +163,37 @@ nav ul li a:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.feature-item i {
-    font-size: 2rem;
-    color: #ff6f61;
-    margin-bottom: 10px;
-}
-
-.feature-item h3 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.feature-item p {
-    font-size: 1rem;
-    color: #666;
-}
-
 .how-it-works {
     padding: 60px 20px;
     background: #ffffff;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .how-it-works h2 {
-    text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #7366ff;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .steps {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .step {
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #f4f7f9;
+    padding: 30px;
+    border-radius: 15px;
     text-align: center;
     flex: 1 1 calc(33.333% - 40px);
-    margin: 10px;
+    margin: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.8s ease-in-out;
+    max-width: 350px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .step:hover {
@@ -211,178 +201,159 @@ nav ul li a:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.step i {
-    font-size: 2rem;
-    color: #ff6f61;
-    margin-bottom: 10px;
-}
-
 .step h3 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+    margin-bottom: 15px;
     color: #333;
-    margin-bottom: 10px;
 }
 
 .step p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #666;
 }
 
-.contact {
-    padding: 60px 20px;
-    background: #f4f7f9;
+.faq {
+    padding: 40px 20px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.contact h2 {
+.faq h2 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #7366ff;
     margin-bottom: 20px;
 }
 
-.contact p {
-    text-align: center;
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 20px;
-}
-
-.contact form {
-    max-width: 600px;
-    margin: 0 auto;
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
+.faq-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 0;
+    overflow: hidden;
+    transition: background 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.contact form input,
-.contact form textarea {
-    width: 100%;
+.faq-item:hover {
+    background: #f4f7f9;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    transition: border-color 0.3s ease;
-}
-
-.contact form input:focus,
-.contact form textarea:focus {
-    border-color: #7366ff;
-    outline: none;
-}
-
-.contact form button {
-    background: #7366ff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-span {
-    color: #61b752;
-    margin-top: 10px;
+.faq-question h3 {
+    font-size: 1rem;
+    color: #333;
+}
+
+.faq-answer {
+    padding: 10px;
+    display: none;
+    background: #f9f9f9;
+}
+
+.faq-item.active .faq-answer {
     display: block;
 }
 
-.contact form button:hover {
-    background: #5a4cd8;
+.faq-item.active .faq-question h3 {
+    color: #7366ff;
+}
+
+.fas {
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .fas {
+    transform: rotate(180deg);
+}
+
+.contact {
+    padding: 60px 20px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #7366ff;
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background: #7366ff;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+    background: #5b52d3;
     transform: scale(1.05);
 }
 
-footer {
-    background: #ffffff;
-    padding: 20px 0;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+.form-response {
     text-align: center;
-    color: #666;
+    margin-top: 20px;
+    color: green;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #7366ff;
+    color: #fff;
 }
 
 @keyframes fadeIn {
     from {
         opacity: 0;
     }
-
     to {
         opacity: 1;
     }
 }
 
-@media (max-width: 992px) {
-
-    .features-grid,
-    .steps {
-        flex-direction: column;
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
     }
-
-    .hero h2 {
-        font-size: 2.5rem;
-    }
-
-    .hero p {
-        font-size: 1.2rem;
-    }
-
-    .contact form {
-        padding: 20px;
+    to {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
 
-@media (max-width: 768px) {
-
-    .features-grid,
-    .steps {
-        flex-direction: column;
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
     }
-
-    .hero h2 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
-
-    .hero {
-        padding: 60px 20px;
-    }
-}
-
-@media (max-width: 576px) {
-    .hero h2 {
-        font-size: 1.8rem;
-    }
-
-    .hero p {
-        font-size: 0.9rem;
-    }
-
-    .contact form {
-        padding: 15px;
-    }
-
-    header .container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .logo {
-        margin-bottom: 10px;
-    }
-
-    nav ul {
-        align-items: center;
+    to {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
